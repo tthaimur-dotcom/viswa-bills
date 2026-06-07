@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Viswa Bills">
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiIHdpZHRoPSIxMDI0IiBoZWlnaHQ9IjEwMjQiPgogIDxkZWZzPgogICAgPGNsaXBQYXRoIGlkPSJyb3VuZGNsaXAiPgogICAgICA8cmVjdCB3aWR0aD0iMTAyNCIgaGVpZ2h0PSIxMDI0IiByeD0iMjMwIiByeT0iMjMwIi8+CiAgICA8L2NsaXBQYXRoPgogIDwvZGVmcz4KCiAgPCEtLSBCYWNrZ3JvdW5kIC0tPgogIDxyZWN0IHdpZHRoPSIxMDI0IiBoZWlnaHQ9IjEwMjQiIHJ4PSIyMzAiIGZpbGw9IiMwZjE4MjQiLz4KCiAgPCEtLSBTdWJ0bGUgZ3JpZCBsaW5lcyAtLT4KICA8ZyBjbGlwLXBhdGg9InVybCgjcm91bmRjbGlwKSIgb3BhY2l0eT0iMC4wNyIgc3Ryb2tlPSIjNGFkZTgwIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGxpbmUgeDE9IjAiIHkxPSIyMDAiIHgyPSIxMDI0IiB5Mj0iMjAwIi8+CiAgICA8bGluZSB4MT0iMCIgeTE9IjQwMCIgeDI9IjEwMjQiIHkyPSI0MDAiLz4KICAgIDxsaW5lIHgxPSIwIiB5MT0iNjAwIiB4Mj0iMTAyNCIgeTI9IjYwMCIvPgogICAgPGxpbmUgeDE9IjAiIHkxPSI4MDAiIHgyPSIxMDI0IiB5Mj0iODAwIi8+CiAgICA8bGluZSB4MT0iMjAwIiB5MT0iMCIgeDI9IjIwMCIgeTI9IjEwMjQiLz4KICAgIDxsaW5lIHgxPSI0MDAiIHkxPSIwIiB4Mj0iNDAwIiB5Mj0iMTAyNCIvPgogICAgPGxpbmUgeDE9IjYwMCIgeTE9IjAiIHgyPSI2MDAiIHkyPSIxMDI0Ii8+CiAgICA8bGluZSB4MT0iODAwIiB5MT0iMCIgeDI9IjgwMCIgeTI9IjEwMjQiLz4KICA8L2c+CgogIDwhLS0gQmlsbCBwYXBlciBzaGFwZSAtIG1haW4gLS0+CiAgPHJlY3QgeD0iMjIwIiB5PSIxODAiIHdpZHRoPSI0NjAiIGhlaWdodD0iNTYwIiByeD0iMjgiIGZpbGw9IiMxYTIyMzUiIHN0cm9rZT0iIzJhM2E1NSIgc3Ryb2tlLXdpZHRoPSIzIi8+CgogIDwhLS0gQmlsbCBwYXBlciB0b3AgZm9sZCBjb3JuZXIgLS0+CiAgPHBvbHlnb24gcG9pbnRzPSI1ODAsMTgwIDY4MCwyODAgNjgwLDE4MCIgZmlsbD0iIzBmMTgyNCIgb3BhY2l0eT0iMC42Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSI1ODAsMTgwIDY4MCwyODAgNTgwLDI4MCIgZmlsbD0iIzI0MzA1MCIvPgogIDxsaW5lIHgxPSI1ODAiIHkxPSIxODAiIHgyPSI2ODAiIHkyPSIyODAiIHN0cm9rZT0iIzJhM2E1NSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KCiAgPCEtLSBEYXNoZWQgbGluZXMgb24gYmlsbCAoY29udGVudCBsaW5lcykgLS0+CiAgPGxpbmUgeDE9IjI2MCIgeTE9IjMxMCIgeDI9IjY0MCIgeTI9IjMxMCIgc3Ryb2tlPSIjMmU0MDYwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1kYXNoYXJyYXk9IjgsNSIvPgogIDxsaW5lIHgxPSIyNjAiIHkxPSIzNzAiIHgyPSI1NjAiIHkyPSIzNzAiIHN0cm9rZT0iIzJlNDA2MCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtZGFzaGFycmF5PSI4LDUiLz4KICA8bGluZSB4MT0iMjYwIiB5MT0iNDMwIiB4Mj0iNjAwIiB5Mj0iNDMwIiBzdHJva2U9IiMyZTQwNjAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWRhc2hhcnJheT0iOCw1Ii8+CiAgPGxpbmUgeDE9IjI2MCIgeTE9IjQ5MCIgeDI9IjUyMCIgeTI9IjQ5MCIgc3Ryb2tlPSIjMmU0MDYwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1kYXNoYXJyYXk9IjgsNSIvPgoKICA8IS0tIEFtb3VudCBoaWdobGlnaHQgYmFyIC0tPgogIDxyZWN0IHg9IjI2MCIgeT0iNTYwIiB3aWR0aD0iMzgwIiBoZWlnaHQ9IjQ4IiByeD0iMTAiIGZpbGw9IiMxNjI1MzUiLz4KICA8bGluZSB4MT0iMjYwIiB5MT0iNTg0IiB4Mj0iNDIwIiB5Mj0iNTg0IiBzdHJva2U9IiMyZTQwNjAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWRhc2hhcnJheT0iNiw0Ii8+CiAgPCEtLSBHcmVlbiBhbW91bnQgb24gcmlnaHQgLS0+CiAgPHJlY3QgeD0iNTAwIiB5PSI1NjgiIHdpZHRoPSIxMjAiIGhlaWdodD0iMzAiIHJ4PSI2IiBmaWxsPSIjMGQyYTFhIi8+CiAgPGxpbmUgeDE9IjUxNSIgeTE9IjU4MyIgeDI9IjYwNSIgeTI9IjU4MyIgc3Ryb2tlPSIjNGFkZTgwIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgoKICA8IS0tIENhbWVyYSBsZW5zIGNpcmNsZSAtLT4KICA8Y2lyY2xlIGN4PSI1MTIiIGN5PSIyNDAiIHI9IjUyIiBmaWxsPSIjMGQxZTMwIiBzdHJva2U9IiMxZTNhNTUiIHN0cm9rZS13aWR0aD0iMyIvPgogIDxjaXJjbGUgY3g9IjUxMiIgY3k9IjI0MCIgcj0iMzYiIGZpbGw9IiMxMTFmMzAiIHN0cm9rZT0iIzI0M2E1NSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPGNpcmNsZSBjeD0iNTEyIiBjeT0iMjQwIiByPSIyMCIgZmlsbD0iIzBhMTUyMCIvPgogIDwhLS0gTGVucyBzaGluZSAtLT4KICA8Y2lyY2xlIGN4PSI1MjIiIGN5PSIyMzIiIHI9IjYiIGZpbGw9IiMxZTNhNTUiIG9wYWNpdHk9IjAuOCIvPgogIDxjaXJjbGUgY3g9IjUxOSIgY3k9IjIyOSIgcj0iMi41IiBmaWxsPSIjM2E2MDgwIiBvcGFjaXR5PSIwLjYiLz4KCiAgPCEtLSBDYW1lcmEgYm9keSB0b3AgLS0+CiAgPHJlY3QgeD0iNDU2IiB5PSIxOTIiIHdpZHRoPSIxMTIiIGhlaWdodD0iMzAiIHJ4PSI4IiBmaWxsPSIjMWEyYTNhIiBzdHJva2U9IiMyNDNhNTUiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxyZWN0IHg9IjQ3NiIgeT0iMTk4IiB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIHJ4PSI1IiBmaWxsPSIjMGQxZTJlIi8+CgogIDwhLS0gR3JlZW4gdGljayAvIGNoZWNrbWFyayBjaXJjbGUgLSBib3R0b20gcmlnaHQgb2YgYmlsbCAtLT4KICA8Y2lyY2xlIGN4PSI2NjUiIGN5PSI2NDUiIHI9IjU0IiBmaWxsPSIjMGQyYTFhIiBzdHJva2U9IiM0YWRlODAiIHN0cm9rZS13aWR0aD0iNCIvPgogIDxwb2x5bGluZSBwb2ludHM9IjY0Miw2NDUgNjU4LDY2MiA2OTIsNjI2IiBmaWxsPSJub25lIiBzdHJva2U9IiM0YWRlODAiIHN0cm9rZS13aWR0aD0iNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CgogIDwhLS0gIlYiIG1vbm9ncmFtIHRvcC1sZWZ0IG9mIGJpbGwgLS0+CiAgPHRleHQgeD0iMjcyIiB5PSIyODgiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSI1NiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzRhZGU4MCIgb3BhY2l0eT0iMC45Ij5WPC90ZXh0PgoKICA8IS0tIEJvdHRvbSB0ZXh0IC0tPgogIDx0ZXh0IHg9IjUxMiIgeT0iODIwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJywgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTIiIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiIGxldHRlci1zcGFjaW5nPSIyIj5WSVNXQTwvdGV4dD4KICA8dGV4dCB4PSI1MTIiIHk9Ijg3OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IidIZWx2ZXRpY2EgTmV1ZScsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iNDAwIiBmaWxsPSIjNGFkZTgwIiBsZXR0ZXItc3BhY2luZz0iNiI+QklMTFM8L3RleHQ+CgogIDwhLS0gRGVjb3JhdGl2ZSBjb3JuZXIgZG90cyAtLT4KICA8Y2lyY2xlIGN4PSIxNDAiIGN5PSIxNDAiIHI9IjgiIGZpbGw9IiM0YWRlODAiIG9wYWNpdHk9IjAuMyIvPgogIDxjaXJjbGUgY3g9Ijg4NCIgY3k9IjE0MCIgcj0iOCIgZmlsbD0iIzRhZGU4MCIgb3BhY2l0eT0iMC4zIi8+CiAgPGNpcmNsZSBjeD0iMTQwIiBjeT0iODg0IiByPSI4IiBmaWxsPSIjNGFkZTgwIiBvcGFjaXR5PSIwLjMiLz4KICA8Y2lyY2xlIGN4PSI4ODQiIGN5PSI4ODQiIHI9IjgiIGZpbGw9IiM0YWRlODAiIG9wYWNpdHk9IjAuMyIvPgo8L3N2Zz4K">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiIHdpZHRoPSIxMDI0IiBoZWlnaHQ9IjEwMjQiPgogIDxkZWZzPgogICAgPGNsaXBQYXRoIGlkPSJyb3VuZGNsaXAiPgogICAgICA8cmVjdCB3aWR0aD0iMTAyNCIgaGVpZ2h0PSIxMDI0IiByeD0iMjMwIiByeT0iMjMwIi8+CiAgICA8L2NsaXBQYXRoPgogIDwvZGVmcz4KCiAgPCEtLSBCYWNrZ3JvdW5kIC0tPgogIDxyZWN0IHdpZHRoPSIxMDI0IiBoZWlnaHQ9IjEwMjQiIHJ4PSIyMzAiIGZpbGw9IiMwZjE4MjQiLz4KCiAgPCEtLSBTdWJ0bGUgZ3JpZCBsaW5lcyAtLT4KICA8ZyBjbGlwLXBhdGg9InVybCgjcm91bmRjbGlwKSIgb3BhY2l0eT0iMC4wNyIgc3Ryb2tlPSIjNGFkZTgwIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGxpbmUgeDE9IjAiIHkxPSIyMDAiIHgyPSIxMDI0IiB5Mj0iMjAwIi8+CiAgICA8bGluZSB4MT0iMCIgeTE9IjQwMCIgeDI9IjEwMjQiIHkyPSI0MDAiLz4KICAgIDxsaW5lIHgxPSIwIiB5MT0iNjAwIiB4Mj0iMTAyNCIgeTI9IjYwMCIvPgogICAgPGxpbmUgeDE9IjAiIHkxPSI4MDAiIHgyPSIxMDI0IiB5Mj0iODAwIi8+CiAgICA8bGluZSB4MT0iMjAwIiB5MT0iMCIgeDI9IjIwMCIgeTI9IjEwMjQiLz4KICAgIDxsaW5lIHgxPSI0MDAiIHkxPSIwIiB4Mj0iNDAwIiB5Mj0iMTAyNCIvPgogICAgPGxpbmUgeDE9IjYwMCIgeTE9IjAiIHgyPSI2MDAiIHkyPSIxMDI0Ii8+CiAgICA8bGluZSB4MT0iODAwIiB5MT0iMCIgeDI9IjgwMCIgeTI9IjEwMjQiLz4KICA8L2c+CgogIDwhLS0gQmlsbCBwYXBlciBzaGFwZSAtIG1haW4gLS0+CiAgPHJlY3QgeD0iMjIwIiB5PSIxODAiIHdpZHRoPSI0NjAiIGhlaWdodD0iNTYwIiByeD0iMjgiIGZpbGw9IiMxYTIyMzUiIHN0cm9rZT0iIzJhM2E1NSIgc3Ryb2tlLXdpZHRoPSIzIi8+CgogIDwhLS0gQmlsbCBwYXBlciB0b3AgZm9sZCBjb3JuZXIgLS0+CiAgPHBvbHlnb24gcG9pbnRzPSI1ODAsMTgwIDY4MCwyODAgNjgwLDE4MCIgZmlsbD0iIzBmMTgyNCIgb3BhY2l0eT0iMC42Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSI1ODAsMTgwIDY4MCwyODAgNTgwLDI4MCIgZmlsbD0iIzI0MzA1MCIvPgogIDxsaW5lIHgxPSI1ODAiIHkxPSIxODAiIHgyPSI2ODAiIHkyPSIyODAiIHN0cm9rZT0iIzJhM2E1NSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KCiAgPCEtLSBEYXNoZWQgbGluZXMgb24gYmlsbCAoY29udGVudCBsaW5lcykgLS0+CiAgPGxpbmUgeDE9IjI2MCIgeTE9IjMxMCIgeDI9IjY0MCIgeTI9IjMxMCIgc3Ryb2tlPSIjMmU0MDYwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1kYXNoYXJyYXk9IjgsNSIvPgogIDxsaW5lIHgxPSIyNjAiIHkxPSIzNzAiIHgyPSI1NjAiIHkyPSIzNzAiIHN0cm9rZT0iIzJlNDA2MCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtZGFzaGFycmF5PSI4LDUiLz4KICA8bGluZSB4MT0iMjYwIiB5MT0iNDMwIiB4Mj0iNjAwIiB5Mj0iNDMwIiBzdHJva2U9IiMyZTQwNjAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWRhc2hhcnJheT0iOCw1Ii8+CiAgPGxpbmUgeDE9IjI2MCIgeTE9IjQ5MCIgeDI9IjUyMCIgeTI9IjQ5MCIgc3Ryb2tlPSIjMmU0MDYwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1kYXNoYXJyYXk9IjgsNSIvPgoKICA8IS0tIEFtb3VudCBoaWdobGlnaHQgYmFyIC0tPgogIDxyZWN0IHg9IjI2MCIgeT0iNTYwIiB3aWR0aD0iMzgwIiBoZWlnaHQ9IjQ4IiByeD0iMTAiIGZpbGw9IiMxNjI1MzUiLz4KICA8bGluZSB4MT0iMjYwIiB5MT0iNTg0IiB4Mj0iNDIwIiB5Mj0iNTg0IiBzdHJva2U9IiMyZTQwNjAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWRhc2hhcnJheT0iNiw0Ii8+CiAgPCEtLSBHcmVlbiBhbW91bnQgb24gcmlnaHQgLS0+CiAgPHJlY3QgeD0iNTAwIiB5PSI1NjgiIHdpZHRoPSIxMjAiIGhlaWdodD0iMzAiIHJ4PSI2IiBmaWxsPSIjMGQyYTFhIi8+CiAgPGxpbmUgeDE9IjUxNSIgeTE9IjU4MyIgeDI9IjYwNSIgeTI9IjU4MyIgc3Ryb2tlPSIjNGFkZTgwIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgoKICA8IS0tIENhbWVyYSBsZW5zIGNpcmNsZSAtLT4KICA8Y2lyY2xlIGN4PSI1MTIiIGN5PSIyNDAiIHI9IjUyIiBmaWxsPSIjMGQxZTMwIiBzdHJva2U9IiMxZTNhNTUiIHN0cm9rZS13aWR0aD0iMyIvPgogIDxjaXJjbGUgY3g9IjUxMiIgY3k9IjI0MCIgcj0iMzYiIGZpbGw9IiMxMTFmMzAiIHN0cm9rZT0iIzI0M2E1NSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPGNpcmNsZSBjeD0iNTEyIiBjeT0iMjQwIiByPSIyMCIgZmlsbD0iIzBhMTUyMCIvPgogIDwhLS0gTGVucyBzaGluZSAtLT4KICA8Y2lyY2xlIGN4PSI1MjIiIGN5PSIyMzIiIHI9IjYiIGZpbGw9IiMxZTNhNTUiIG9wYWNpdHk9IjAuOCIvPgogIDxjaXJjbGUgY3g9IjUxOSIgY3k9IjIyOSIgcj0iMi41IiBmaWxsPSIjM2E2MDgwIiBvcGFjaXR5PSIwLjYiLz4KCiAgPCEtLSBDYW1lcmEgYm9keSB0b3AgLS0+CiAgPHJlY3QgeD0iNDU2IiB5PSIxOTIiIHdpZHRoPSIxMTIiIGhlaWdodD0iMzAiIHJ4PSI4IiBmaWxsPSIjMWEyYTNhIiBzdHJva2U9IiMyNDNhNTUiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxyZWN0IHg9IjQ3NiIgeT0iMTk4IiB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIHJ4PSI1IiBmaWxsPSIjMGQxZTJlIi8+CgogIDwhLS0gR3JlZW4gdGljayAvIGNoZWNrbWFyayBjaXJjbGUgLSBib3R0b20gcmlnaHQgb2YgYmlsbCAtLT4KICA8Y2lyY2xlIGN4PSI2NjUiIGN5PSI2NDUiIHI9IjU0IiBmaWxsPSIjMGQyYTFhIiBzdHJva2U9IiM0YWRlODAiIHN0cm9rZS13aWR0aD0iNCIvPgogIDxwb2x5bGluZSBwb2ludHM9IjY0Miw2NDUgNjU4LDY2MiA2OTIsNjI2IiBmaWxsPSJub25lIiBzdHJva2U9IiM0YWRlODAiIHN0cm9rZS13aWR0aD0iNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CgogIDwhLS0gIlYiIG1vbm9ncmFtIHRvcC1sZWZ0IG9mIGJpbGwgLS0+CiAgPHRleHQgeD0iMjcyIiB5PSIyODgiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSI1NiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzRhZGU4MCIgb3BhY2l0eT0iMC45Ij5WPC90ZXh0PgoKICA8IS0tIEJvdHRvbSB0ZXh0IC0tPgogIDx0ZXh0IHg9IjUxMiIgeT0iODIwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJywgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTIiIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiIGxldHRlci1zcGFjaW5nPSIyIj5WSVNXQTwvdGV4dD4KICA8dGV4dCB4PSI1MTIiIHk9Ijg3OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IidIZWx2ZXRpY2EgTmV1ZScsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iNDAwIiBmaWxsPSIjNGFkZTgwIiBsZXR0ZXItc3BhY2luZz0iNiI+QklMTFM8L3RleHQ+CgogIDwhLS0gRGVjb3JhdGl2ZSBjb3JuZXIgZG90cyAtLT4KICA8Y2lyY2xlIGN4PSIxNDAiIGN5PSIxNDAiIHI9IjgiIGZpbGw9IiM0YWRlODAiIG9wYWNpdHk9IjAuMyIvPgogIDxjaXJjbGUgY3g9Ijg4NCIgY3k9IjE0MCIgcj0iOCIgZmlsbD0iIzRhZGU4MCIgb3BhY2l0eT0iMC4zIi8+CiAgPGNpcmNsZSBjeD0iMTQwIiBjeT0iODg0IiByPSI4IiBmaWxsPSIjNGFkZTgwIiBvcGFjaXR5PSIwLjMiLz4KICA8Y2lyY2xlIGN4PSI4ODQiIGN5PSI4ODQiIHI9IjgiIGZpbGw9IiM0YWRlODAiIG9wYWNpdHk9IjAuMyIvPgo8L3N2Zz4K">
+<meta name="theme-color" content="#0a0e1a">
+<title>Viswa Bills</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+  --bg:#0a0e1a;--s1:#111526;--s2:#181d30;--s3:#1e2438;
+  --border:#252b40;--border2:#2e3650;
+  --accent:#3b82f6;--accent-l:#60a5fa;--accent-dim:rgba(59,130,246,.12);
+  --green:#22c55e;--green-dim:rgba(34,197,94,.12);
+  --amber:#f59e0b;--amber-dim:rgba(245,158,11,.12);
+  --red:#ef4444;--red-dim:rgba(239,68,68,.12);
+  --text:#eef0f8;--muted:#6b7494;--muted2:#8b92b8;
+  --font:'Outfit',sans-serif;--mono:'DM Mono',monospace;
+}
+body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100dvh;overflow-x:hidden}
+
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:var(--s1);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50}
+.logo{font-size:16px;font-weight:800;letter-spacing:-.3px}
+.logo em{font-style:normal;color:#4ade80}
+.tabs{display:flex;background:var(--s2);border-radius:10px;padding:3px;gap:2px}
+.tab{padding:7px 12px;border-radius:8px;font-size:12px;font-weight:600;border:none;background:transparent;color:var(--muted2);font-family:var(--font);cursor:pointer;transition:all .18s}
+.tab.on{background:var(--s3);color:var(--text)}
+
+.pg{display:none;padding:16px 16px 80px;animation:up .22s ease}
+.pg.on{display:block}
+@keyframes up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* SETUP BANNER */
+.setup-banner{background:var(--amber-dim);border:1px solid rgba(245,158,11,.3);border-radius:14px;padding:14px 16px;margin-bottom:14px;display:flex;gap:12px;align-items:flex-start}
+.setup-banner.hide{display:none}
+.setup-icon{font-size:22px;flex-shrink:0}
+.setup-text{font-size:13px;color:var(--amber);line-height:1.5}
+.setup-text b{color:#fcd34d;display:block;margin-bottom:3px;font-size:14px}
+.setup-link{color:#fcd34d;text-decoration:underline;cursor:pointer;font-weight:600}
+
+/* HERO */
+.hero{background:var(--s1);border:1px solid var(--border);border-radius:18px;padding:22px 18px 18px;text-align:center;margin-bottom:14px}
+.hero-icon{width:60px;height:60px;background:var(--green-dim);border:1px solid rgba(74,222,128,.25);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:26px}
+.hero h2{font-size:19px;font-weight:800;margin-bottom:4px}
+.hero p{font-size:13px;color:var(--muted2);line-height:1.5}
+
+.type-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.type-card{padding:13px;border-radius:13px;border:1px solid var(--border);background:var(--s1);cursor:pointer;transition:all .18s;text-align:center}
+.type-card .tc-icon{font-size:20px;margin-bottom:4px}
+.type-card .tc-name{font-size:13px;font-weight:700}
+.type-card .tc-sub{font-size:11px;color:var(--muted);margin-top:2px}
+.type-card.sel-cash{border-color:#4ade80;background:rgba(74,222,128,.08)}
+.type-card.sel-cash .tc-name{color:#4ade80}
+.type-card.sel-gst{border-color:var(--accent);background:var(--accent-dim)}
+.type-card.sel-gst .tc-name{color:var(--accent-l)}
+
+.btn-primary{width:100%;padding:16px;background:#4ade80;color:#000;font-family:var(--font);font-size:15px;font-weight:700;border:none;border-radius:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px;margin-bottom:10px;transition:transform .15s,filter .15s}
+.btn-primary:active{transform:scale(.97);filter:brightness(.9)}
+.btn-sec{width:100%;padding:13px;background:transparent;border:1px solid var(--border2);border-radius:13px;color:var(--muted2);font-family:var(--font);font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .18s}
+.btn-sec:active{background:var(--s2)}
+#fi{display:none}
+
+.prev-wrap{display:none;border-radius:14px;overflow:hidden;border:1px solid var(--border);margin-bottom:14px;position:relative}
+.prev-wrap img{width:100%;display:block;max-height:220px;object-fit:cover}
+.prev-badge{position:absolute;top:10px;right:10px;padding:5px 11px;border-radius:8px;font-size:11px;font-weight:700;font-family:var(--mono)}
+.pb-cash{background:rgba(74,222,128,.25);color:#4ade80;border:1px solid rgba(74,222,128,.4)}
+.pb-gst{background:rgba(59,130,246,.25);color:var(--accent-l);border:1px solid rgba(59,130,246,.4)}
+
+.proc{display:none;text-align:center;padding:28px 16px}
+.spin{width:42px;height:42px;border:3px solid var(--border2);border-top-color:#4ade80;border-radius:50%;animation:spin .75s linear infinite;margin:0 auto 14px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.proc p{font-size:13px;color:var(--muted2)}
+.proc-step{font-size:11px;color:#4ade80;font-family:var(--mono);margin-top:5px}
+
+.result{display:none;background:var(--s1);border:1px solid var(--border);border-radius:16px;padding:15px;margin-bottom:12px}
+.result-hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding-bottom:11px;border-bottom:1px solid var(--border)}
+.result-hd-l{font-size:14px;font-weight:700}
+.result-hd-r{font-size:11px;color:var(--muted);font-family:var(--mono)}
+.item-r{display:flex;justify-content:space-between;align-items:flex-start;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.item-r:last-child{border:none}
+.item-n{font-size:13px}
+.item-q{font-size:11px;color:var(--muted);font-family:var(--mono);margin-top:2px}
+.item-a{font-size:13px;font-weight:600;font-family:var(--mono);color:#4ade80}
+.tot-bar{background:rgba(74,222,128,.08);border:1px solid rgba(74,222,128,.2);border-radius:11px;padding:13px 15px;display:flex;justify-content:space-between;align-items:center;margin-top:11px}
+.tot-lbl{font-size:13px;color:var(--muted2);font-weight:600}
+.tot-val{font-size:19px;font-weight:800;font-family:var(--mono);color:#4ade80}
+.gst-bd{background:var(--accent-dim);border:1px solid rgba(59,130,246,.2);border-radius:11px;padding:12px 15px;margin-top:8px;display:none}
+.gst-r{display:flex;justify-content:space-between;font-size:12px;font-family:var(--mono);padding:3px 0}
+.gst-lbl{color:var(--muted2)}
+.gst-v{color:var(--accent-l)}
+
+.form-wrap{display:none;margin-bottom:12px}
+.fl{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;display:block;margin-bottom:6px}
+.finput{width:100%;padding:12px 13px;background:var(--s2);border:1px solid var(--border);border-radius:10px;color:var(--text);font-family:var(--font);font-size:14px;outline:none;margin-bottom:11px;transition:border-color .18s}
+.finput:focus{border-color:#4ade80}
+.finput::placeholder{color:var(--muted)}
+select.finput option{background:var(--s2)}
+
+.gs-box{background:var(--s2);border:1px dashed rgba(245,158,11,.4);border-radius:12px;padding:12px;margin-bottom:11px}
+.gs-lbl{font-size:11px;font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px}
+.gs-inp{width:100%;padding:9px 11px;background:var(--s1);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:var(--mono);font-size:11px;outline:none}
+.gs-inp:focus{border-color:var(--amber)}
+.gs-inp::placeholder{color:var(--muted)}
+.gs-hint{font-size:11px;color:var(--muted);margin-top:5px;line-height:1.4}
+
+.btn-save{width:100%;padding:15px;background:#4ade80;color:#000;font-family:var(--font);font-size:15px;font-weight:700;border:none;border-radius:14px;cursor:pointer;display:none;align-items:center;justify-content:center;gap:8px;transition:transform .15s}
+.btn-save:active{transform:scale(.97)}
+
+/* RECORDS */
+.rec-summary{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px}
+.sc{background:var(--s1);border:1px solid var(--border);border-radius:14px;padding:13px 14px}
+.sc-lbl{font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px}
+.sc-val{font-size:19px;font-weight:800;font-family:var(--mono)}
+.sc-val.g{color:#4ade80}.sc-val.b{color:var(--accent-l)}.sc-val.a{color:var(--amber)}.sc-val.r{color:var(--red)}
+
+.filter-strip{display:flex;gap:7px;overflow-x:auto;padding-bottom:3px;margin-bottom:14px;scrollbar-width:none}
+.filter-strip::-webkit-scrollbar{display:none}
+.fb{padding:6px 14px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--muted2);font-family:var(--font);font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:all .18s}
+.fb.on{background:var(--s2);color:var(--text);border-color:var(--border2)}
+
+.ri{background:var(--s1);border:1px solid var(--border);border-radius:13px;padding:13px 15px;margin-bottom:9px;cursor:pointer;transition:border-color .18s}
+.ri:active{border-color:#4ade80}
+.ri-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:7px}
+.ri-dealer{font-size:14px;font-weight:700}
+.ri-amt{font-size:15px;font-weight:800;font-family:var(--mono);color:#4ade80}
+.ri-bot{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.ri-date{font-size:10px;color:var(--muted);font-family:var(--mono)}
+.tag{font-size:10px;font-weight:700;padding:3px 8px;border-radius:6px}
+.tg{background:rgba(74,222,128,.15);color:#4ade80}
+.tb{background:var(--accent-dim);color:var(--accent-l)}
+.ta{background:var(--amber-dim);color:var(--amber)}
+.tr{background:var(--red-dim);color:var(--red)}
+.ri-ic{font-size:10px;color:var(--muted);margin-left:auto}
+.empty{text-align:center;padding:44px 16px;color:var(--muted)}
+.empty-ic{font-size:44px;margin-bottom:10px;opacity:.35}
+
+/* SETTINGS PAGE */
+.setting-section{background:var(--s1);border:1px solid var(--border);border-radius:16px;padding:16px;margin-bottom:14px}
+.setting-title{font-size:14px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.setting-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.setting-row:last-child{border:none;padding-bottom:0}
+.setting-label{font-size:13px;color:var(--text)}
+.setting-sub{font-size:11px;color:var(--muted);margin-top:2px}
+.api-status{font-size:11px;font-weight:700;padding:4px 10px;border-radius:6px}
+.api-ok{background:rgba(74,222,128,.15);color:#4ade80}
+.api-no{background:var(--red-dim);color:var(--red)}
+.full-input{width:100%;padding:12px 13px;background:var(--s2);border:1px solid var(--border);border-radius:10px;color:var(--text);font-family:var(--mono);font-size:12px;outline:none;margin-top:8px;transition:border-color .18s}
+.full-input:focus{border-color:#4ade80}
+.full-input::placeholder{color:var(--muted)}
+.btn-green{width:100%;padding:13px;background:#4ade80;color:#000;font-family:var(--font);font-size:14px;font-weight:700;border:none;border-radius:12px;cursor:pointer;margin-top:10px;transition:transform .15s}
+.btn-green:active{transform:scale(.97)}
+.btn-outline{width:100%;padding:12px;background:transparent;border:1px solid var(--border2);border-radius:12px;color:var(--muted2);font-family:var(--font);font-size:13px;font-weight:600;cursor:pointer;margin-top:8px;transition:background .18s}
+.btn-outline:active{background:var(--s2)}
+.help-steps{margin-top:12px}
+.help-step{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px}
+.step-num{min-width:22px;height:22px;border-radius:50%;background:#4ade80;color:#000;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.step-text{font-size:12px;color:var(--muted2);line-height:1.5}
+.step-text b{color:var(--text);display:block}
+.step-link{color:#4ade80;font-weight:600}
+
+/* MODALS */
+.mbk{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:200;align-items:flex-end}
+.mbk.on{display:flex}
+.modal{background:var(--s1);border-radius:22px 22px 0 0;padding:18px 18px 32px;width:100%;max-height:88dvh;overflow-y:auto;position:relative}
+.m-handle{width:38px;height:4px;background:var(--border2);border-radius:2px;margin:0 auto 15px}
+.m-title{font-size:17px;font-weight:800;margin-bottom:3px}
+.m-sub{font-size:11px;color:var(--muted);font-family:var(--mono);margin-bottom:14px}
+.m-close{position:absolute;top:18px;right:18px;background:var(--s2);border:none;color:var(--text);width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center}
+.m-acts{display:flex;gap:9px;margin-top:14px}
+.btn-mark{flex:1;padding:12px;background:#4ade80;color:#000;border:none;border-radius:11px;font-family:var(--font);font-size:13px;font-weight:700;cursor:pointer}
+.btn-prev{flex:1;padding:12px;background:var(--accent-dim);color:var(--accent-l);border:1px solid rgba(59,130,246,.3);border-radius:11px;font-family:var(--font);font-size:13px;font-weight:700;cursor:pointer}
+.btn-del{padding:12px 14px;background:transparent;border:1px solid rgba(239,68,68,.35);color:var(--red);border-radius:11px;font-family:var(--font);font-size:13px;font-weight:600;cursor:pointer}
+
+/* BILL PREVIEW */
+.bill-bk{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:300;align-items:center;justify-content:center;padding:12px}
+.bill-bk.on{display:flex}
+.bill-modal{background:#fff;border-radius:12px;width:100%;max-width:480px;max-height:90dvh;overflow-y:auto;position:relative}
+.bill-close{position:absolute;top:10px;right:10px;background:rgba(0,0,0,.12);border:none;width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;z-index:10}
+.bill-paper{font-family:'Courier New',monospace;font-size:11.5px;color:#111;padding:18px 16px;background:#fff;line-height:1.45}
+.bc{text-align:center}.bb{font-weight:700}
+.dl{border:none;border-top:1px dashed #999;margin:5px 0}
+.sl{border:none;border-top:1px solid #444;margin:5px 0}
+.brow{display:flex;justify-content:space-between;gap:4px}
+.brow3{display:grid;grid-template-columns:18px 1fr 38px 46px;gap:2px;font-size:10.5px}
+.brow3 span:nth-child(3){text-align:center}
+.brow3 span:nth-child(4){text-align:right}
+.btot{display:flex;justify-content:flex-end;gap:8px;font-weight:700;font-size:12px}
+.bwords{font-size:9.5px;margin-top:3px}
+.bfooter{display:flex;justify-content:space-between;font-size:9.5px;margin-top:3px}
+.ghead{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-bottom:4px}
+.grow4{display:grid;grid-template-columns:16px 1fr 26px 32px 34px 28px 28px 38px;gap:1px;font-size:9.5px}
+.grow4 span:not(:nth-child(1)):not(:nth-child(2)){text-align:right}
+.gbot{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:4px;font-size:10px}
+.gsum-row{display:flex;justify-content:space-between;padding:1px 0}
+.gnet{display:flex;justify-content:space-between;font-weight:700;font-size:11px;border-top:1px solid #444;margin-top:3px;padding-top:3px}
+
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--s2);border:1px solid var(--border2);border-radius:11px;padding:11px 18px;font-size:13px;font-weight:600;z-index:400;transition:transform .28s ease;white-space:nowrap;pointer-events:none}
+.toast.on{transform:translateX(-50%) translateY(0)}
+.toast.ok{border-color:rgba(74,222,128,.4);color:#4ade80}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="logo">Viswa <em>Bills</em></div>
+  <div class="tabs">
+    <button class="tab on" onclick="goTab('scan',this)">Scan</button>
+    <button class="tab" onclick="goTab('records',this)">Records</button>
+    <button class="tab" onclick="goTab('settings',this)">&#9881;</button>
+  </div>
+</div>
+
+<!-- ═══ SCAN PAGE ═══ -->
+<div class="pg on" id="pg-scan">
+
+  <div class="setup-banner" id="setupBanner">
+    <div class="setup-icon">&#9888;</div>
+    <div class="setup-text">
+      <b>API key not set</b>
+      Camera AI reading needs a free Gemini key.
+      <span class="setup-link" onclick="goTab('settings',document.querySelectorAll('.tab')[2])">Set it up &#8594;</span>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-icon">&#128247;</div>
+    <h2>Scan any bill</h2>
+    <p>AI reads handwritten or printed bills.<br>Saves to Google Sheets automatically.</p>
+  </div>
+
+  <div class="type-row">
+    <div class="type-card sel-cash" id="tc-cash" onclick="selType('cash')">
+      <div class="tc-icon">&#128181;</div>
+      <div class="tc-name">Cash Bill</div>
+      <div class="tc-sub">No GST</div>
+    </div>
+    <div class="type-card" id="tc-gst" onclick="selType('gst')">
+      <div class="tc-icon">&#129534;</div>
+      <div class="tc-name">GST Invoice</div>
+      <div class="tc-sub">With 18% GST</div>
+    </div>
+  </div>
+
+  <button class="btn-primary" onclick="openCam()">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+    Open Camera
+  </button>
+  <button class="btn-sec" onclick="document.getElementById('fi').click()">&#128193; Choose from gallery</button>
+  <input type="file" id="fi" accept="image/*" onchange="handleFile(this)">
+
+  <div class="prev-wrap" id="prevWrap">
+    <img id="prevImg" src="" alt="">
+    <span class="prev-badge pb-cash" id="prevBadge">CASH</span>
+  </div>
+
+  <div class="proc" id="proc">
+    <div class="spin"></div>
+    <p>Reading your bill...</p>
+    <div class="proc-step" id="pstep">Scanning handwriting</div>
+  </div>
+
+  <div class="result" id="result">
+    <div class="result-hd">
+      <div class="result-hd-l" id="rHdL">Items found</div>
+      <div class="result-hd-r" id="rHdR"></div>
+    </div>
+    <div id="rItems"></div>
+    <div class="tot-bar">
+      <span class="tot-lbl">Total</span>
+      <span class="tot-val" id="rTot">&#8377;0</span>
+    </div>
+    <div class="gst-bd" id="gstBd">
+      <div class="gst-r"><span class="gst-lbl">Taxable amount</span><span class="gst-v" id="gBase">&#8377;0</span></div>
+      <div class="gst-r"><span class="gst-lbl">CGST (9%)</span><span class="gst-v" id="gCgst">&#8377;0</span></div>
+      <div class="gst-r"><span class="gst-lbl">SGST (9%)</span><span class="gst-v" id="gSgst">&#8377;0</span></div>
+      <div class="gst-r" style="border-top:1px solid rgba(59,130,246,.2);margin-top:5px;padding-top:5px"><span class="gst-lbl" style="color:var(--accent-l);font-weight:700">Net payable</span><span class="gst-v" style="color:var(--accent-l);font-weight:700" id="gNet">&#8377;0</span></div>
+    </div>
+  </div>
+
+  <div class="form-wrap" id="formWrap">
+    <label class="fl">Customer / Dealer name</label>
+    <input class="finput" id="fDealer" placeholder="e.g. Zahid, Parmesh..." type="text">
+    <label class="fl">Customer GSTIN <span style="color:var(--muted);font-weight:400;text-transform:none">(GST bills only)</span></label>
+    <input class="finput" id="fGstin" placeholder="Leave blank for cash bills">
+    <label class="fl">Payment status</label>
+    <select class="finput" id="fStatus">
+      <option value="paid">Paid &#8212; received full amount</option>
+      <option value="pending">Pending &#8212; not yet received</option>
+      <option value="partial">Partial payment received</option>
+    </select>
+    <div class="gs-box">
+      <div class="gs-lbl">&#128202; Google Sheets URL <span style="font-weight:400;color:var(--muted)">(optional)</span></div>
+      <input class="gs-inp" id="gsUrl" placeholder="Paste Apps Script URL here..." type="url">
+      <div class="gs-hint">Bills save locally even without this. Add URL to also sync to Google Sheets.</div>
+    </div>
+    <button class="btn-save" id="btnSave" onclick="saveBill()" style="display:flex">&#10003; Save &amp; Generate Bill</button>
+  </div>
+</div>
+
+<!-- ═══ RECORDS PAGE ═══ -->
+<div class="pg" id="pg-records">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+    <div style="font-size:20px;font-weight:800">Records</div>
+    <div style="font-size:11px;color:var(--muted);font-family:var(--mono)" id="recCount">0 bills</div>
+  </div>
+  <div class="rec-summary">
+    <div class="sc"><div class="sc-lbl">Total sales</div><div class="sc-val g" id="sTot">&#8377;0</div></div>
+    <div class="sc"><div class="sc-lbl">Outstanding</div><div class="sc-val a" id="sPend">&#8377;0</div></div>
+    <div class="sc"><div class="sc-lbl">GST bills</div><div class="sc-val b" id="sGst">&#8377;0</div></div>
+    <div class="sc"><div class="sc-lbl">Cash bills</div><div class="sc-val g" id="sCash">&#8377;0</div></div>
+  </div>
+  <div class="filter-strip">
+    <button class="fb on" onclick="filterRec('all',this)">All</button>
+    <button class="fb" onclick="filterRec('cash',this)">Cash</button>
+    <button class="fb" onclick="filterRec('gst',this)">GST</button>
+    <button class="fb" onclick="filterRec('pending',this)">Pending</button>
+    <button class="fb" onclick="filterRec('paid',this)">Paid</button>
+  </div>
+  <div id="recList"></div>
+</div>
+
+<!-- ═══ SETTINGS PAGE ═══ -->
+<div class="pg" id="pg-settings">
+
+  <div class="setting-section">
+    <div class="setting-title">&#129302; Gemini API Key <span id="apiStatus" class="api-status api-no">Not set</span></div>
+    <p style="font-size:13px;color:var(--muted2);margin-bottom:12px;line-height:1.5">Free forever. 1500 scans/day. No credit card needed.</p>
+    <label class="fl">Your Gemini API Key</label>
+    <input class="full-input" id="apiKeyInput" type="password" placeholder="AIzaSy...">
+    <button class="btn-green" onclick="saveApiKey()">Save API Key</button>
+    <div class="help-steps" id="helpSteps">
+      <div style="font-size:12px;font-weight:700;color:var(--muted);margin:14px 0 8px;text-transform:uppercase;letter-spacing:.5px">How to get free key</div>
+      <div class="help-step"><div class="step-num">1</div><div class="step-text"><b>Open Google AI Studio</b><a class="step-link" href="https://aistudio.google.com" target="_blank"> aistudio.google.com &#8599;</a></div></div>
+      <div class="help-step"><div class="step-num">2</div><div class="step-text"><b>Sign in with Gmail</b> Same Google account you use daily</div></div>
+      <div class="help-step"><div class="step-num">3</div><div class="step-text"><b>Click "Get API Key"</b> Then "Create API key in new project"</div></div>
+      <div class="help-step"><div class="step-num">4</div><div class="step-text"><b>Copy the key</b> Starts with AIzaSy...</div></div>
+      <div class="help-step"><div class="step-num">5</div><div class="step-text"><b>Paste above</b> and tap Save API Key</div></div>
+    </div>
+  </div>
+
+  <div class="setting-section">
+    <div class="setting-title">&#128202; Google Sheets</div>
+    <p style="font-size:13px;color:var(--muted2);margin-bottom:10px;line-height:1.5">Auto-save every bill to your Google Sheet.</p>
+    <label class="fl">Apps Script URL</label>
+    <input class="full-input" id="gsUrlSettings" type="url" placeholder="https://script.google.com/macros/s/.../exec">
+    <button class="btn-green" onclick="saveGsUrl()">Save Sheets URL</button>
+    <button class="btn-outline" onclick="showGsSteps()">How to set up Google Sheets &#8964;</button>
+    <div id="gsSteps" style="display:none" class="help-steps">
+      <div style="font-size:12px;font-weight:700;color:var(--muted);margin:14px 0 8px;text-transform:uppercase;letter-spacing:.5px">Google Sheets setup</div>
+      <div class="help-step"><div class="step-num">1</div><div class="step-text"><b>Create new Google Sheet</b> Name it "Viswa Bills"</div></div>
+      <div class="help-step"><div class="step-num">2</div><div class="step-text"><b>Extensions &#8594; Apps Script</b> Delete everything shown</div></div>
+      <div class="help-step"><div class="step-num">3</div><div class="step-text"><b>Paste the script code</b> Tap below to copy it</div></div>
+      <button class="btn-outline" style="margin-top:6px;font-size:12px;font-family:var(--mono)" onclick="copyScript()">&#128203; Copy Script Code</button>
+      <div class="help-step" style="margin-top:10px"><div class="step-num">4</div><div class="step-text"><b>Deploy &#8594; New deployment &#8594; Web app</b> Set access to "Anyone"</div></div>
+      <div class="help-step"><div class="step-num">5</div><div class="step-text"><b>Copy the URL</b> Paste it above and save</div></div>
+    </div>
+  </div>
+
+  <div class="setting-section">
+    <div class="setting-title">&#128203; Shop Details</div>
+    <div class="setting-row"><div><div class="setting-label">Shop name</div><div class="setting-sub">VISWA ELECTRONICS</div></div></div>
+    <div class="setting-row"><div><div class="setting-label">GSTIN</div><div class="setting-sub">29AEOPM8457M1ZF</div></div></div>
+    <div class="setting-row"><div><div class="setting-label">Address</div><div class="setting-sub">First Shop, 1st Floor, 3rd Cross, M.G. Road, Tumkur-572101</div></div></div>
+    <div class="setting-row"><div><div class="setting-label">Phone</div><div class="setting-sub">9844053053</div></div></div>
+  </div>
+
+  <div class="setting-section">
+    <div class="setting-title">&#128190; Data</div>
+    <div class="setting-row">
+      <div><div class="setting-label">Total records saved</div><div class="setting-sub" id="totalRecords">0 bills</div></div>
+    </div>
+    <button class="btn-outline" style="margin-top:10px;color:var(--red);border-color:rgba(239,68,68,.3)" onclick="clearAll()">&#128465; Clear all records</button>
+  </div>
+
+</div>
+
+<!-- DETAIL MODAL -->
+<div class="mbk" id="detMbk" onclick="closeDet(event)">
+  <div class="modal">
+    <div class="m-handle"></div>
+    <button class="m-close" onclick="closeDet()">&#10005;</button>
+    <div class="m-title" id="mDealer"></div>
+    <div class="m-sub" id="mMeta"></div>
+    <div id="mItems"></div>
+    <div class="tot-bar" style="margin-top:11px">
+      <span class="tot-lbl">Total</span>
+      <span class="tot-val" id="mTot"></span>
+    </div>
+    <div class="m-acts">
+      <button class="btn-mark" id="mPayBtn" onclick="markPaid()">Mark Paid</button>
+      <button class="btn-prev" onclick="showBillPreview()">Preview Bill</button>
+      <button class="btn-del" onclick="delBill()">Delete</button>
+    </div>
+  </div>
+</div>
+
+<!-- BILL PREVIEW MODAL -->
+<div class="bill-bk" id="billBk">
+  <div class="bill-modal">
+    <button class="bill-close" onclick="document.getElementById('billBk').classList.remove('on')">&#10005;</button>
+    <div id="billPaper"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const SHOP={name:'VISWA ELECTRONICS',tagline:'DEALERS IN ALL KINDS OF ELECTRONICS',addr1:'First Shop, 1st Floor, 3rd Cross',addr2:'M.G. Road, Tumkur - 572101',phone:'Ph: 9844053053',gstin:'29AEOPM8457M1ZF'};
+const GS_SCRIPT=`function doPost(e){var ss=SpreadsheetApp.getActiveSpreadsheet();var d=JSON.parse(e.postData.contents);var sh=ss.getSheetByName(d.type==='gst'?'GST Bills':'Cash Bills')||ss.insertSheet(d.type==='gst'?'GST Bills':'Cash Bills');if(sh.getLastRow()===0)sh.appendRow(['Date','Bill No','Customer','GSTIN','Items','Qty','Total','Base','CGST','SGST','Status']);sh.appendRow([d.date,d.billNo,d.dealer,d.gstin,d.itemsSummary,d.totalQty,d.total,d.base,d.cgst,d.sgst,d.status]);return ContentService.createTextOutput(JSON.stringify({ok:true})).setMimeType(ContentService.MimeType.JSON);}function doGet(){return ContentService.createTextOutput('OK');}`;
+
+let curType='cash', curBill=null, curModalId=null;
+let recs=JSON.parse(localStorage.getItem('vb_recs')||'[]');
+let billCounter=parseInt(localStorage.getItem('vb_counter')||'0');
+
+function init(){
+  // Load API key
+  const key=localStorage.getItem('vb_gemini_key')||'';
+  if(key){
+    document.getElementById('setupBanner').classList.add('hide');
+    document.getElementById('apiStatus').className='api-status api-ok';
+    document.getElementById('apiStatus').textContent='Active';
+    document.getElementById('apiKeyInput').value=key;
+  }
+  // Load Google Sheets URL
+  const gs=localStorage.getItem('vb_gsurl')||'';
+  if(gs){
+    if(document.getElementById('gsUrl')) document.getElementById('gsUrl').value=gs;
+    if(document.getElementById('gsUrlSettings')) document.getElementById('gsUrlSettings').value=gs;
+  }
+  document.getElementById('totalRecords').textContent=recs.length+' bills';
+}
+
+// Save to localStorage immediately when user types
+function watchInputs(){
+  const apiInput=document.getElementById('apiKeyInput');
+  const gsInput=document.getElementById('gsUrlSettings');
+  if(apiInput){
+    apiInput.addEventListener('blur',function(){
+      const k=this.value.trim();
+      if(k && k.length > 10){
+        localStorage.setItem('vb_gemini_key',k);
+        document.getElementById('setupBanner').classList.add('hide');
+        document.getElementById('apiStatus').className='api-status api-ok';
+        document.getElementById('apiStatus').textContent='Active';
+      }
+    });
+  }
+  if(gsInput){
+    gsInput.addEventListener('blur',function(){
+      const u=this.value.trim();
+      if(u && u.startsWith('https')){
+        localStorage.setItem('vb_gsurl',u);
+        if(document.getElementById('gsUrl')) document.getElementById('gsUrl').value=u;
+      }
+    });
+  }
+}
+
+function goTab(id,btn){
+  document.querySelectorAll('.pg').forEach(x=>x.classList.remove('on'));
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));
+  document.getElementById('pg-'+id).classList.add('on');
+  btn.classList.add('on');
+  if(id==='records') renderRecs('all');
+}
+
+function selType(t){
+  curType=t;
+  document.getElementById('tc-cash').className='type-card'+(t==='cash'?' sel-cash':'');
+  document.getElementById('tc-gst').className='type-card'+(t==='gst'?' sel-gst':'');
+  document.getElementById('prevBadge').className='prev-badge '+(t==='cash'?'pb-cash':'pb-gst');
+  document.getElementById('prevBadge').textContent=t==='gst'?'GST':'CASH';
+  if(curBill) renderResult(curBill);
+}
+
+function openCam(){
+  const i=document.createElement('input');
+  i.type='file';i.accept='image/*';i.capture='environment';
+  i.onchange=()=>handleFile(i);i.click();
+}
+
+function handleFile(inp){
+  const f=inp.files[0]; if(!f) return;
+  const r=new FileReader();
+  r.onload=e=>{
+    document.getElementById('prevImg').src=e.target.result;
+    document.getElementById('prevWrap').style.display='block';
+    processImg(e.target.result);
+  };
+  r.readAsDataURL(f);
+}
+
+const steps=['Scanning handwriting...','Reading item names...','Extracting amounts...','Building bill...'];
+async function processImg(b64){
+  const apiKey=localStorage.getItem('vb_gemini_key')||'';
+  if(!apiKey){
+    toast('Please set your Gemini API key in Settings first',false);
+    return;
+  }
+  document.getElementById('proc').style.display='block';
+  document.getElementById('result').style.display='none';
+  document.getElementById('formWrap').style.display='none';
+  let si=0;
+  const stepEl=document.getElementById('pstep');
+  const itv=setInterval(()=>{if(si<steps.length)stepEl.textContent=steps[si++];},650);
+
+  const imgData=b64.split(',')[1];
+  const mimeType=b64.startsWith('data:image/png')?'image/png':'image/jpeg';
+
+  const prompt=`Read this bill image carefully. Extract ALL line items.
+Return ONLY valid JSON, no markdown, no explanation:
+{"items":[{"name":"item name","qty":1,"rate":0,"amount":500}],"total":2405}
+Rules: extract every item with qty and amount. If rate not shown put 0. total = sum of all amounts. Keep names clear and short.`;
+
+  try{
+    const res=await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key='+apiKey,{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        contents:[{parts:[
+          {inline_data:{mime_type:mimeType,data:imgData}},
+          {text:prompt}
+        ]}],
+        generationConfig:{temperature:0.1,maxOutputTokens:1000}
+      })
+    });
+    const data=await res.json();
+    clearInterval(itv);
+    document.getElementById('proc').style.display='none';
+    if(data.error){toast('API Error: '+data.error.message,false);return;}
+    const raw=data.candidates[0].content.parts[0].text.replace(/```json|```/g,'').trim();
+    const bill=JSON.parse(raw);
+    curBill=bill;
+    renderResult(bill);
+  }catch(e){
+    clearInterval(itv);
+    document.getElementById('proc').style.display='none';
+    toast('Could not read bill. Try a clearer photo.',false);
+    console.error(e);
+  }
+}
+
+function renderResult(bill){
+  document.getElementById('result').style.display='block';
+  const now=new Date();
+  document.getElementById('rHdL').textContent=bill.items.length+' items found';
+  document.getElementById('rHdR').textContent=now.toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'});
+  document.getElementById('rItems').innerHTML=bill.items.map(it=>`
+    <div class="item-r">
+      <div><div class="item-n">${it.name}</div><div class="item-q">Qty: ${it.qty}${it.rate?' · &#8377;'+it.rate+'/unit':''}</div></div>
+      <div class="item-a">&#8377;${it.amount.toLocaleString('en-IN')}</div>
+    </div>`).join('');
+  document.getElementById('rTot').textContent='&#8377;'+bill.total.toLocaleString('en-IN');
+  if(curType==='gst'){
+    const base=Math.round(bill.total/1.18);
+    const tax=bill.total-base;
+    document.getElementById('gstBd').style.display='block';
+    document.getElementById('gBase').textContent='&#8377;'+base.toLocaleString('en-IN');
+    document.getElementById('gCgst').textContent='&#8377;'+Math.round(tax/2).toLocaleString('en-IN');
+    document.getElementById('gSgst').textContent='&#8377;'+Math.round(tax/2).toLocaleString('en-IN');
+    document.getElementById('gNet').textContent='&#8377;'+bill.total.toLocaleString('en-IN');
+  } else {
+    document.getElementById('gstBd').style.display='none';
+  }
+  document.getElementById('formWrap').style.display='block';
+  document.getElementById('btnSave').style.display='flex';
+  const gs=localStorage.getItem('vb_gsurl')||'';
+  if(gs) document.getElementById('gsUrl').value=gs;
+}
+
+async function saveBill(){
+  if(!curBill) return;
+  const dealer=document.getElementById('fDealer').value.trim()||'Walk-in';
+  const gstin=document.getElementById('fGstin').value.trim();
+  const status=document.getElementById('fStatus').value;
+  const gsUrl=document.getElementById('gsUrl').value.trim();
+  if(gsUrl) localStorage.setItem('vb_gsurl',gsUrl);
+
+  billCounter++;
+  localStorage.setItem('vb_counter',billCounter);
+  const billNo=String(billCounter).padStart(3,'0');
+  const now=new Date();
+  const base=curType==='gst'?Math.round(curBill.total/1.18):curBill.total;
+  const tax=curType==='gst'?curBill.total-base:0;
+  const totalQty=curBill.items.reduce((s,i)=>s+i.qty,0);
+  const itemsSummary=curBill.items.map(i=>i.name).join(', ');
+
+  const rec={id:Date.now(),billNo,dealer,gstin,status,type:curType,total:curBill.total,base,cgst:Math.round(tax/2),sgst:Math.round(tax/2),items:curBill.items,totalQty,itemsSummary,date:now.toISOString()};
+  recs.unshift(rec);
+  localStorage.setItem('vb_recs',JSON.stringify(recs));
+  document.getElementById('totalRecords').textContent=recs.length+' bills';
+
+  if(gsUrl){
+    try{
+      await fetch(gsUrl,{method:'POST',mode:'no-cors',body:JSON.stringify({date:now.toLocaleDateString('en-IN'),billNo,dealer,gstin,itemsSummary,totalQty,total:rec.total,base:rec.base,cgst:rec.cgst,sgst:rec.sgst,status,type:curType})});
+      toast('Saved! Synced to Google Sheets ✓',true);
+    }catch(e){toast('Saved locally ✓',true);}
+  } else {
+    toast('Bill saved! ✓',true);
+  }
+
+  document.getElementById('prevWrap').style.display='none';
+  document.getElementById('result').style.display='none';
+  document.getElementById('formWrap').style.display='none';
+  document.getElementById('fDealer').value='';
+  document.getElementById('fGstin').value='';
+  document.getElementById('btnSave').style.display='none';
+  curBill=null;
+  setTimeout(()=>openBillPreview(rec),300);
+}
+
+function renderRecs(filter){
+  let list=recs;
+  if(filter==='cash') list=recs.filter(r=>r.type==='cash');
+  else if(filter==='gst') list=recs.filter(r=>r.type==='gst');
+  else if(filter==='pending') list=recs.filter(r=>r.status!=='paid');
+  else if(filter==='paid') list=recs.filter(r=>r.status==='paid');
+
+  document.getElementById('recCount').textContent=list.length+' bill'+(list.length!==1?'s':'');
+  const tot=recs.reduce((s,r)=>s+r.total,0);
+  const pend=recs.filter(r=>r.status!=='paid').reduce((s,r)=>s+r.total,0);
+  const gst=recs.filter(r=>r.type==='gst').reduce((s,r)=>s+r.total,0);
+  const cash=recs.filter(r=>r.type==='cash').reduce((s,r)=>s+r.total,0);
+  document.getElementById('sTot').textContent='&#8377;'+tot.toLocaleString('en-IN');
+  document.getElementById('sPend').textContent='&#8377;'+pend.toLocaleString('en-IN');
+  document.getElementById('sGst').textContent='&#8377;'+gst.toLocaleString('en-IN');
+  document.getElementById('sCash').textContent='&#8377;'+cash.toLocaleString('en-IN');
+
+  const el=document.getElementById('recList');
+  if(!list.length){el.innerHTML='<div class="empty"><div class="empty-ic">&#128203;</div><div>No records yet.<br>Scan your first bill!</div></div>';return;}
+  el.innerHTML=list.map(r=>{
+    const d=new Date(r.date);
+    const ds=d.toLocaleDateString('en-IN',{day:'2-digit',month:'short'});
+    return `<div class="ri" onclick="openDet(${r.id})">
+      <div class="ri-top"><div class="ri-dealer">${r.dealer} &#8212; #${r.billNo}</div><div class="ri-amt">&#8377;${r.total.toLocaleString('en-IN')}</div></div>
+      <div class="ri-bot">
+        <span class="ri-date">${ds}</span>
+        <span class="tag ${r.type==='gst'?'tb':'tg'}">${r.type.toUpperCase()}</span>
+        <span class="tag ${r.status==='paid'?'tg':r.status==='partial'?'ta':'tr'}">${r.status.toUpperCase()}</span>
+        <span class="ri-ic">${r.items.length} items</span>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function filterRec(f,btn){
+  document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  renderRecs(f);
+}
+
+function openDet(id){
+  const r=recs.find(x=>x.id===id); if(!r) return;
+  curModalId=id;
+  document.getElementById('mDealer').textContent=r.dealer+' &#8212; Bill #'+r.billNo;
+  const d=new Date(r.date);
+  document.getElementById('mMeta').textContent=d.toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'})+' · '+r.type.toUpperCase()+' · '+r.status.toUpperCase();
+  document.getElementById('mItems').innerHTML=r.items.map(it=>`
+    <div class="item-r">
+      <div><div class="item-n">${it.name}</div><div class="item-q">Qty: ${it.qty}</div></div>
+      <div class="item-a">&#8377;${it.amount.toLocaleString('en-IN')}</div>
+    </div>`).join('');
+  document.getElementById('mTot').textContent='&#8377;'+r.total.toLocaleString('en-IN');
+  document.getElementById('mPayBtn').style.display=r.status==='paid'?'none':'block';
+  document.getElementById('detMbk').classList.add('on');
+}
+
+function closeDet(e){
+  if(!e||e.target===document.getElementById('detMbk'))
+    document.getElementById('detMbk').classList.remove('on');
+}
+
+function markPaid(){
+  const idx=recs.findIndex(r=>r.id===curModalId);
+  if(idx>-1){recs[idx].status='paid';localStorage.setItem('vb_recs',JSON.stringify(recs));}
+  closeDet(); renderRecs('all');
+  document.querySelectorAll('.fb').forEach((b,i)=>b.classList.toggle('on',i===0));
+  toast('Marked as paid! ✓',true);
+}
+
+function delBill(){
+  if(!confirm('Delete this bill?')) return;
+  recs=recs.filter(r=>r.id!==curModalId);
+  localStorage.setItem('vb_recs',JSON.stringify(recs));
+  document.getElementById('totalRecords').textContent=recs.length+' bills';
+  closeDet(); renderRecs('all');
+  document.querySelectorAll('.fb').forEach((b,i)=>b.classList.toggle('on',i===0));
+  toast('Bill deleted',false);
+}
+
+function showBillPreview(){const r=recs.find(x=>x.id===curModalId);if(!r)return;closeDet();openBillPreview(r);}
+
+function numWords(n){
+  const a=['','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Eleven','Twelve','Thirteen','Fourteen','Fifteen','Sixteen','Seventeen','Eighteen','Nineteen'];
+  const b=['','','Twenty','Thirty','Forty','Fifty','Sixty','Seventy','Eighty','Ninety'];
+  if(n===0)return'Zero';if(n<20)return a[n];if(n<100)return b[Math.floor(n/10)]+(n%10?' '+a[n%10]:'');
+  if(n<1000)return a[Math.floor(n/100)]+' Hundred'+(n%100?' '+numWords(n%100):'');
+  if(n<100000)return numWords(Math.floor(n/1000))+' Thousand'+(n%1000?' '+numWords(n%1000):'');
+  if(n<10000000)return numWords(Math.floor(n/100000))+' Lakh'+(n%100000?' '+numWords(n%100000):'');
+  return numWords(Math.floor(n/10000000))+' Crore'+(n%10000000?' '+numWords(n%10000000):'');
+}
+function amtWords(n){return'Rupees '+numWords(Math.floor(n))+' Only';}
+
+function openBillPreview(r){
+  const d=new Date(r.date);
+  const ds=d.toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'});
+  const ts=d.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:true}).toUpperCase();
+  let html='';
+  if(r.type==='cash'){
+    html=`<div class="bill-paper">
+      <div class="bc bb" style="font-size:15px;letter-spacing:1px">BILL</div>
+      <div class="sl"></div>
+      <div class="brow"><span>Bill No &nbsp;: ${r.billNo}</span><span>Date: ${ds}</span></div>
+      <div class="brow"><span>Customer : ${r.dealer}</span><span>Time: ${ts}</span></div>
+      <div class="dl"></div>
+      <div class="brow3 bb"><span>Sl</span><span>Item Name</span><span>Qty</span><span>Amount</span></div>
+      <div class="dl"></div>
+      ${r.items.map((it,i)=>`<div class="brow3"><span>${i+1}</span><span>${it.name}</span><span>${it.qty}</span><span>${it.amount}</span></div>`).join('')}
+      <div class="dl"></div>
+      <div class="btot"><span>NET TOTAL :</span><span>${r.total}</span></div>
+      <div class="sl"></div>
+      <div class="bwords">Amount: ${amtWords(r.total)}</div>
+      <div class="sl"></div>
+      <div class="bfooter"><span>For Reference Only</span><span>Page:1</span></div>
+    </div>`;
+  } else {
+    html=`<div class="bill-paper">
+      <div class="bc bb" style="font-size:12px;letter-spacing:.8px">TAX INVOICE</div>
+      <div class="bc" style="font-size:10px">CASH/CREDIT</div>
+      <div class="sl"></div>
+      <div class="ghead">
+        <div style="font-size:10px"><div class="bb" style="font-size:12px">${SHOP.name}</div><div>${SHOP.tagline}</div><div>${SHOP.addr1}</div><div>${SHOP.addr2}</div><div>${SHOP.phone}</div></div>
+        <div style="font-size:10px;text-align:right"><div>GSTIN : ${SHOP.gstin}</div><div>Bill Date: ${ds}</div><div>Bill Time: ${ts}</div><div>Bill No : ${r.billNo}</div><div>GST : 18%</div></div>
+      </div>
+      <div class="sl"></div>
+      <div class="brow" style="font-size:10px"><span>Customer : ${r.dealer}</span><span>GSTIN: ${r.gstin||'&#8212;'}</span></div>
+      <div class="sl"></div>
+      <div class="grow4 bb"><span>Sl</span><span>Item</span><span>Qty</span><span>Rate</span><span>Taxbl</span><span>CGST</span><span>SGST</span><span>Total</span></div>
+      <div class="dl"></div>
+      ${r.items.map((it,i)=>{const tx=Math.round(it.amount/1.18);const cg=Math.round((it.amount-tx)/2);return`<div class="grow4"><span>${i+1}</span><span>${it.name}</span><span>${it.qty}</span><span>${it.rate||Math.round(it.amount/it.qty)}</span><span>${tx}</span><span>${cg}</span><span>${cg}</span><span>${it.amount}</span></div>`}).join('')}
+      <div class="sl"></div>
+      <div class="gbot">
+        <div><div class="bb" style="margin-bottom:2px">GST% Basic CGST SGST</div><div>18.00 ${r.base} ${r.cgst} ${r.sgst}</div><div style="margin-top:8px">For: ${SHOP.name}</div></div>
+        <div style="text-align:right"><div class="gsum-row"><span>Total Rate</span><span>: ${r.base}</span></div><div class="gsum-row"><span>Discount</span><span>: 0.00</span></div><div class="gsum-row"><span>CENTRAL GST</span><span>: ${r.cgst}</span></div><div class="gsum-row"><span>STATE GST</span><span>: ${r.sgst}</span></div><div class="gsum-row"><span>Round Off</span><span>: +0.0</span></div><div class="gnet"><span>NET PAYABLE</span><span>: ${r.total}</span></div></div>
+      </div>
+      <div class="sl"></div>
+      <div class="bwords">Amount: ${amtWords(r.total)}</div>
+      <div class="sl"></div>
+      <div class="bfooter"><span>This Invoice is Generated By Software</span><span>Page:1</span></div>
+    </div>`;
+  }
+  document.getElementById('billPaper').innerHTML=html;
+  document.getElementById('billBk').classList.add('on');
+}
+
+function saveApiKey(){
+  const k=document.getElementById('apiKeyInput').value.trim();
+  if(!k){toast('Please enter your API key',false);return;}
+  
+  localStorage.setItem('vb_gemini_key',k);
+  document.getElementById('setupBanner').classList.add('hide');
+  document.getElementById('apiStatus').className='api-status api-ok';
+  document.getElementById('apiStatus').textContent='Active';
+  toast('API key saved! Camera reading is ready ✓',true);
+}
+
+function saveGsUrl(){
+  const u=document.getElementById('gsUrlSettings').value.trim();
+  if(!u){toast('Please enter the URL',false);return;}
+  localStorage.setItem('vb_gsurl',u);
+  document.getElementById('gsUrl').value=u;
+  toast('Google Sheets URL saved ✓',true);
+}
+
+function showGsSteps(){
+  const el=document.getElementById('gsSteps');
+  el.style.display=el.style.display==='none'?'block':'none';
+}
+
+function copyScript(){
+  navigator.clipboard.writeText(GS_SCRIPT).then(()=>toast('Script code copied! ✓',true)).catch(()=>{
+    const ta=document.createElement('textarea');
+    ta.value=GS_SCRIPT;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);
+    toast('Script code copied! ✓',true);
+  });
+}
+
+function clearAll(){
+  if(!confirm('Delete ALL records? This cannot be undone.')) return;
+  recs=[];localStorage.setItem('vb_recs','[]');
+  billCounter=0;localStorage.setItem('vb_counter','0');
+  document.getElementById('totalRecords').textContent='0 bills';
+  toast('All records cleared',false);
+}
+
+function toast(msg,ok){
+  const t=document.getElementById('toast');
+  t.textContent=msg;
+  t.className='toast on'+(ok?' ok':'');
+  setTimeout(()=>t.className='toast',2800);
+}
+
+window.addEventListener('load',function(){ init(); watchInputs(); });
+</script>
+</body>
+</html>
