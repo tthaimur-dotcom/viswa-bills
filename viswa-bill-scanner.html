@@ -2056,104 +2056,75 @@ function showTodayPreview(){
   const pendCount=todayRecs.filter(r=>r.status==='pending').length;
   const partCount=todayRecs.filter(r=>r.status==='partial').length;
 
-  const days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
   const months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   const ds=today.getDate()+'-'+months[today.getMonth()]+'-'+today.getFullYear();
 
-  // GST totals
   const gstRecs=todayRecs.filter(r=>r.type==='gst');
   const totalBase=gstRecs.reduce((s,r)=>s+(r.base||0),0);
   const totalCgst=gstRecs.reduce((s,r)=>s+(r.cgst||0),0);
   const totalSgst=gstRecs.reduce((s,r)=>s+(r.sgst||0),0);
 
-  const pad=(str,len)=>{
-    str=String(str);
-    return str.length>=len?str:str+' '.repeat(len-str.length);
-  };
-  const rpad=(str,len)=>{
-    str=String(str);
-    return str.length>=len?str:' '.repeat(len-str.length)+str;
-  };
+  let html=`<div id="todayReportA4" style="font-family:'Courier New',Courier,monospace;font-size:11px;color:#000;background:#fff;padding:22px 24px;line-height:1.5;width:100%;box-sizing:border-box">`;
 
-  let html=`<div id="todayReportA4" style="
-    font-family:'Courier New',Courier,monospace;
-    font-size:12px;
-    color:#000;
-    background:#fff;
-    padding:28px 32px;
-    line-height:1.7;
-    width:100%;
-    box-sizing:border-box;
-  ">`;
+  // Title - IMPORTANT header bold
+  html+=`<div style="text-align:center;font-size:16px;font-weight:700;letter-spacing:3px;margin-bottom:2px">DAILY REPORT</div>`;
+  html+=`<div style="text-align:center;font-size:11px;margin-bottom:8px;border-bottom:2px solid #000;padding-bottom:6px"><b>${ds}</b> &nbsp;&middot;&nbsp; ${todayRecs.length} Bills</div>`;
 
-  const SEP='─'.repeat(38);
-  const DSEP='═'.repeat(38);
-
-  // Title
-  html+=`<div style="text-align:center;font-size:14px;font-weight:700;letter-spacing:2px;margin-bottom:2px">DAILY REPORT</div>`;
-  html+=`<div style="text-align:center;font-size:11px;margin-bottom:8px;border-bottom:2px solid #000;padding-bottom:6px">${ds} &nbsp;&nbsp; ${todayRecs.length} Bill${todayRecs.length!==1?'s':''}</div>`;
-
-  // Sales summary
-  html+=`<pre style="margin:0;font-family:'Courier New',Courier,monospace;font-size:12px;line-height:1.7">`;
-  html+=`Total Sales       : ${rpad('\u20B9'+todayTotal.toLocaleString('en-IN'),10)}
-`;
-  html+=`  GST Bills       : ${rpad('\u20B9'+todayGst.toLocaleString('en-IN'),10)}
-`;
-  html+=`  Cash Bills      : ${rpad('\u20B9'+todayCash.toLocaleString('en-IN'),10)}
-`;
-  html+=`${SEP}
-`;
-  html+=`Received Today    : ${rpad('\u20B9'+todayReceived.toLocaleString('en-IN'),10)}
-`;
-  html+=`Outstanding       : ${rpad('\u20B9'+todayPending.toLocaleString('en-IN'),10)}
-`;
-  html+=`${SEP}
-`;
-  html+=`Bills - Paid      : ${rpad(paidCount,10)}
-`;
-  html+=`Bills - Partial   : ${rpad(partCount,10)}
-`;
-  html+=`Bills - Pending   : ${rpad(pendCount,10)}
-`;
+  // Summary - key figures with bold labels
+  html+=`<div style="font-size:11.5px;line-height:1.7;margin-bottom:6px">`;
+  html+=`<div style="display:flex;justify-content:space-between"><span><b>Total Sales</b></span><span><b>&#8377;${todayTotal.toLocaleString('en-IN')}</b></span></div>`;
+  html+=`<div style="display:flex;justify-content:space-between;color:#444;font-size:10.5px"><span>&nbsp;&nbsp;GST Bills</span><span>&#8377;${todayGst.toLocaleString('en-IN')}</span></div>`;
+  html+=`<div style="display:flex;justify-content:space-between;color:#444;font-size:10.5px"><span>&nbsp;&nbsp;Cash Bills</span><span>&#8377;${todayCash.toLocaleString('en-IN')}</span></div>`;
+  html+=`</div>`;
+  html+=`<div style="border-top:1px dashed #888;margin:6px 0"></div>`;
+  html+=`<div style="font-size:11.5px;line-height:1.7;margin-bottom:6px">`;
+  html+=`<div style="display:flex;justify-content:space-between"><span>Received Today</span><span style="color:#16a34a;font-weight:700">&#8377;${todayReceived.toLocaleString('en-IN')}</span></div>`;
+  html+=`<div style="display:flex;justify-content:space-between"><span>Outstanding</span><span style="color:#dc2626;font-weight:700">&#8377;${todayPending.toLocaleString('en-IN')}</span></div>`;
+  html+=`</div>`;
+  html+=`<div style="border-top:1px dashed #888;margin:6px 0"></div>`;
+  html+=`<div style="display:flex;justify-content:space-around;font-size:11px;margin-bottom:6px">`;
+  html+=`<span>Paid: <b>${paidCount}</b></span><span>Partial: <b>${partCount}</b></span><span>Pending: <b>${pendCount}</b></span>`;
+  html+=`</div>`;
 
   if(gstRecs.length>0){
-    html+=`${SEP}
-`;
-    html+=`GST Summary
-`;
-    html+=`  Taxable Amount  : ${rpad('\u20B9'+totalBase.toLocaleString('en-IN'),10)}
-`;
-    html+=`  CGST @ 9%       : ${rpad('\u20B9'+totalCgst.toLocaleString('en-IN'),10)}
-`;
-    html+=`  SGST @ 9%       : ${rpad('\u20B9'+totalSgst.toLocaleString('en-IN'),10)}
-`;
-    html+=`  Total GST       : ${rpad('\u20B9'+(totalCgst+totalSgst).toLocaleString('en-IN'),10)}
-`;
+    html+=`<div style="border-top:1px dashed #888;margin:6px 0"></div>`;
+    html+=`<div style="font-size:11px;line-height:1.6">`;
+    html+=`<div style="font-weight:700;margin-bottom:2px">GST Summary</div>`;
+    html+=`<div style="display:flex;justify-content:space-between;font-size:10.5px"><span>&nbsp;&nbsp;Taxable</span><span>&#8377;${totalBase.toLocaleString('en-IN')}</span></div>`;
+    html+=`<div style="display:flex;justify-content:space-between;font-size:10.5px"><span>&nbsp;&nbsp;CGST @ 9%</span><span>&#8377;${totalCgst.toLocaleString('en-IN')}</span></div>`;
+    html+=`<div style="display:flex;justify-content:space-between;font-size:10.5px"><span>&nbsp;&nbsp;SGST @ 9%</span><span>&#8377;${totalSgst.toLocaleString('en-IN')}</span></div>`;
+    html+=`<div style="display:flex;justify-content:space-between;font-size:10.5px"><span>&nbsp;&nbsp;<b>Total GST</b></span><span><b>&#8377;${(totalCgst+totalSgst).toLocaleString('en-IN')}</b></span></div>`;
+    html+=`</div>`;
   }
 
-  // Bill list
-  html+=`${SEP}
-`;
-  html+=`Bill-wise Details
-`;
-  html+=`${SEP}
-`;
+  // Bill-wise table - full names, no truncation, smaller font
+  html+=`<div style="border-top:2px solid #000;margin:8px 0 4px"></div>`;
+  html+=`<div style="font-weight:700;font-size:11.5px;margin-bottom:4px">Bill-wise Details</div>`;
+  html+=`<table style="width:100%;border-collapse:collapse;font-size:9.5px">`;
+  html+=`<thead><tr style="border-bottom:1px solid #000">`;
+  html+=`<td style="padding:3px 2px;font-weight:700">Bill #</td>`;
+  html+=`<td style="padding:3px 2px;font-weight:700">Customer</td>`;
+  html+=`<td style="padding:3px 2px;font-weight:700;text-align:right">Amount</td>`;
+  html+=`<td style="padding:3px 2px;font-weight:700;text-align:center">Status</td>`;
+  html+=`</tr></thead><tbody>`;
   todayRecs.forEach(r=>{
-    const paid=r.status==='paid'?r.total:(r.paid||0);
     const due=r.status==='paid'?0:(r.balance!==undefined?r.balance:r.total);
     const status=r.status==='paid'?'PAID':r.status==='partial'?'PART':'PEND';
-    html+=`#${pad(r.billNo,14)}${pad(r.dealer.substring(0,12),13)}${rpad('\u20B9'+r.total.toLocaleString('en-IN'),8)} [${status}]
-`;
+    const sc=r.status==='paid'?'#16a34a':r.status==='partial'?'#d97706':'#dc2626';
+    const shortBill=r.billNo.replace('GMN/2026/','').replace('GMN/','');
+    html+=`<tr style="border-bottom:1px dotted #ccc">`;
+    html+=`<td style="padding:3px 2px">${shortBill}</td>`;
+    html+=`<td style="padding:3px 2px">${r.dealer}</td>`;
+    html+=`<td style="padding:3px 2px;text-align:right;font-weight:600">&#8377;${r.total.toLocaleString('en-IN')}</td>`;
+    html+=`<td style="padding:3px 2px;text-align:center;color:${sc};font-weight:700">${status}</td>`;
+    html+=`</tr>`;
     if(due>0){
-      html+=`  ${pad('',14)}${pad('Due:',13)}${rpad('\u20B9'+due.toLocaleString('en-IN'),8)}
-`;
+      html+=`<tr><td></td><td colspan="2" style="padding:1px 2px;font-size:9px;color:#dc2626;text-align:right">Due: &#8377;${due.toLocaleString('en-IN')}</td><td></td></tr>`;
     }
   });
-
-  html+=`${DSEP}
-`;
-  html+=`</pre>`;
-  html+=`<div style="text-align:center;font-size:10px;color:#888;border-top:1px dashed #ccc;padding-top:6px;margin-top:4px">Generated by Viswa Bills</div>`;
+  html+=`</tbody></table>`;
+  html+=`<div style="border-top:2px solid #000;margin:6px 0 4px"></div>`;
+  html+=`<div style="text-align:center;font-size:9px;color:#888">Generated by Viswa Bills</div>`;
   html+=`</div>`;
 
   document.getElementById('reportPaper').innerHTML=html;
@@ -2161,7 +2132,7 @@ function showTodayPreview(){
 }
 
 async function shareReportAsImage(){
-  const el=document.querySelector('#reportPaper .bill-paper');
+  const el=document.getElementById('todayReportA4')||document.querySelector('#reportPaper > div');
   if(!el){toast('Open report first','err');return;}
   toast('Generating image...','ok');
   try{
